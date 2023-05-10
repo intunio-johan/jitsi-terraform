@@ -1,8 +1,8 @@
-variable "aws_profile" {
-  description = "AWS Credentials profile"
-  type        = string
-  default     = "default"
-}
+#variable "aws_profile" {
+#  description = "AWS Credentials profile"
+#  type        = string
+#  default     = "default"
+#}
 
 variable "aws_region" {
   description = "AWS Region where this server will be hosted"
