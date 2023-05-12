@@ -36,7 +36,7 @@ systemctl daemon-reload
 # Configure Jits install
 debconf-set-selections <<< $(echo 'jitsi-videobridge jitsi-videobridge/jvb-hostname string '$HOSTNAME)
 debconf-set-selections <<< 'jitsi-meet-web-config   jitsi-meet/cert-choice  select  "Generate a new self-signed certificate"';
-debconf-set-selections <<< 'jitsi-meet    jitsi-meet/jaas-choice    boolean    false'
+debconf-set-selections <<< 'jitsi-meet    jitsi-meet/jaas-choice    boolean    false';
 # Debug
 echo $EMAIL >> /debug.txt
 echo $HOSTNAME >> /debug.txt
