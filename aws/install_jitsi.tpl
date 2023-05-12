@@ -21,6 +21,9 @@ source /etc/profile
 apt install -y nginx
 systemctl start nginx.service
 systemctl enable nginx.service
+# add prosody to sources
+echo deb http://packages.prosody.im/debian $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list
+wget https://prosody.im/files/prosody-debian-packages.key -O- | sudo apt-key add -
 # add Jitsi to sources
 wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
 sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
