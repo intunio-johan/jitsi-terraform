@@ -26,7 +26,8 @@ echo deb http://packages.prosody.im/debian $(lsb_release -sc) main | sudo tee -a
 wget https://prosody.im/files/prosody-debian-packages.key -O- | sudo apt-key add -
 apt update
 # install prosody
-apt install lua5.2
+# apt install lua5.2
+apt install lua-unbound
 # add Jitsi to sources
 wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
 sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
